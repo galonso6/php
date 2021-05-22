@@ -1,8 +1,11 @@
 <?php
 
 $miVariable = 'Esta es mi primera variable';
-$miNumero=10;
-$miDecimal=10.5;
+$miNumero = 10;
+$miDecimal = 10.5;
+$miBolean = true;
+$miNulo = null;
+$miVacio = ' ';
 
 
 echo$miVariable, '<br>';
@@ -26,4 +29,15 @@ echo $miNumero / $miDecimal;
 echo '<br>';
 
 echo $miNumero - $miDecimal;
+echo '<br>';
+
+var_dump($miBolean);
+echo '<br>';
+
+var_dump($miNulo);
+echo '<br>';
+
+var_dump($miVacio);
+
+
 ?>
