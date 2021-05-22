@@ -15,4 +15,15 @@ echo '<br>';
 
 var_dump($miDecimal);
 echo '<br>';
+
+echo $miNumero + $miDecimal;
+echo '<br>';
+
+echo $miNumero * $miDecimal;
+echo '<br>';
+
+echo $miNumero / $miDecimal;
+echo '<br>';
+
+echo $miNumero - $miDecimal;
 ?>
