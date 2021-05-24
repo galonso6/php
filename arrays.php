@@ -12,4 +12,7 @@ echo $marcas [1];
 echo '<br>';
 
 echo $marcas [2];
+echo '<br>';
+
+echo $marcas [0];
 ?>
