@@ -56,14 +56,32 @@ foreach ($motos as $key => $value) {
 }
 
 echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
 
 $autos= [
-    "Mazda_CX5" => 'CX5',
+    "Mazda_CX5" => [
+        'CX5',
+        '323',
+        'CX7',
+        '2',
+    ],
+    'BMW' => [
+        'Serie 2',
+        'Z4',
+        'M1',
+    ],
 ];
 var_dump($autos);
+echo '<br>';
 
+foreach ($autos as $marca => $modelos) {
+   echo "En la marca $marca tenemos los modelos: ";
 
-
-
-
+   foreach ($modelos as $key => $modelo) {
+       echo "$modelo,  ";
+   }
+   echo "<br>";
+}
 ?>      
