@@ -41,9 +41,26 @@ while ($inc <= 30) {
     echo "<br>";
 $inc ++;
 }
+echo "<br>";
+$motos = [
+    'Vestrong',
+    'Yamaha',
+    'Duccati',
+    'Suzuki',
+    'Pulsar',
+    'Discovery',
+];
 
+foreach ($motos as $key => $value) {
+   echo "Llave: $key y valor: $value <br>";
+}
 
+echo "<br>";
 
+$autos= [
+    "Mazda_CX5" => 'CX5',
+];
+var_dump($autos);
 
 
 
