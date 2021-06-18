@@ -1,32 +1,16 @@
 <?php
+require_once('../base/functions.php');
 
 $salario = $_GET['salario'] ?? '';
 $cedula = $_GET['cedula'] ?? '';
 $salud = $pension = $ARL = $fps = 0;
-$porcentajeSalud = 0.04;
-$porcentajePension = 0.04;
-$porcentajeARL = 0.005;
-$porcentajeFps = 0.01;
-$smlv = 1014980;
-$bono = 40000;
-
-
 
 
 if ($salario) {
-    $salud = $salario * $porcentajeSalud;
-    $pension = $salario * $porcentajePension;
-    $ARL = $salario * $porcentajeARL;
-}
-
-if ($salario > ($smlv * 4) ) {
-   $fps = $salario * $porcentajeFps;
-}
-
-if ($salario <=($smlv * 2)) {
-    $bono = $bono;
-}else {
-    $bono = 0;
+    $salud = deducible ($salario, 'salud');
+    $pension =deducible ($salario, 'pension');
+    $ARL =deducible ($salario, 'arl');
+    $fps =deducible($salario, 'fps');
 }
 
 ?>
