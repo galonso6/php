@@ -1,5 +1,4 @@
 <?php
-require_once('../base/functions.php');
 
 $salario = $_GET['salario'] ?? '';
 $cedula = $_GET['cedula'] ?? '';
@@ -40,13 +39,13 @@ if ($salario) {
     <table border="2" >
     
     <tr >
-        <th>Cédula</th>
         <th>Salario</th>
+        <th>Cedula</th>
         <th>Salud (4%)</th>
         <th>Pension(4%)</th>
         <th>ARL (0.5%)</th>
         <th>Fondo de pensión Solidaridad (1% > 4 SMLV)</th>
-        <th>Bono (Salario inferior a 2 smlv</th>
+     
     </tr>
     <tr>
         <td><?php echo $cedula; ?></td>
@@ -55,7 +54,7 @@ if ($salario) {
         <td><?php echo $pension; ?></td>
         <td><?php echo $ARL; ?></td>
         <td><?php echo $fps; ?></td>
-        <td><?php echo $bono;?></td>
+      
         </tr>
     </table>
 </body>
