@@ -15,8 +15,7 @@ if ($salario && $cedula) {
 }
 
 if (isset($_REQUEST['salario']) && !$_REQUEST['salario']) {
-  $errorSalario = 'Debe ingresar un salario';
-}
+  $errorSalario = 'Debe ingresar un sal
 
 if (isset($_REQUEST['salario']) && $_REQUEST['salario'] && !$salario) {
   $errorSalario = 'Debe ingresar un número mayor a 0';
