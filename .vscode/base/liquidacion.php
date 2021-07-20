@@ -1,7 +1,16 @@
 <?php
+require_once('./functions.php');
+
 $salario = $_GET['salario'] ?? '';
-$errorSalario = $_GET['errorSalario'] ?? '';
-$salud = $_GET['salud'] ?? '';
+$salario = intval($salario);
+$cedula = $_GET['cedula'];
+$salud = $pension = $arl = $fps =0;
+$errorSalario = '';
+
+if ($salario && $cedula){
+  $salud = deducible($salario, 'salud');
+  $pension = deducible()
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +24,7 @@ $salud = $_GET['salud'] ?? '';
 <body>
   <form action="liquidacionActions.php" method="POST">
     <label>Salario</label>
-    <input type="number" name="salario">
+    <input type="number" name="salario">=1
     <label style="color:red"><?php echo $errorSalario ?></label>
     <br>
     <label>Cédula</label>
