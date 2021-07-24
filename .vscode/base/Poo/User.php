@@ -1,28 +1,35 @@
 <?php
-
 class User {
-    public $id;
+
+    private $id;
     public $name;
     public $lastname;
     public $email;
-    public $password;
-
-    public function __construct()
+    protected $password;
+  
+    public function __construct(int $id)
     {
-        
+      $this->id = $id;
     }
-    public function setName(string $name){
-        $this->name = $name;
+  
+    public function setName(string $name) {
+      $this->name = $name;
     }
-    
-    public function setLastname(String $lastname){
-        $this->lastname = $lastname;
+  
+    public function setLastname(string $lastname) {
+      $this->lastname = $lastname;
     }
-    public function getFullName(){
-        return $this->name. ' '. $this->lastname;
+  
+    public function getFullName()
+    {
+      return $this->name . ' ' . $this->lastname;
     }
-    public function _destruct(){
-        echo 'Se termino el objeto User';
+  
+    public function __destruct()
+    {
+      echo 'Se terminó el objeto User';
     }
-}
+  }
+  
+
 ?>
